@@ -1,0 +1,41 @@
+använd terminalapplikationen "qdbus"
+
+ex:
+
+
+Metadata = qdbus org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get org.mpris.MediaPlayer2.Player.Metadata
+
+ger:
+mpris:artUrl: https://open.spotify.com/image/021781ebfe2dcf2cc9f21074d83b9bb78f59cf5e
+mpris:length: 877466000
+mpris:trackid: spotify:track:3m4yVLEUMmyCm2HAHnLogU
+xesam:album: The Mystery Of The Yeti Part 2
+xesam:albumArtist: Various Artists
+xesam:artist: Hallucinogen
+xesam:autoRating: 0.25
+xesam:discNumber: 1
+xesam:title: The Herb Garden - Original Mix
+xesam:trackNumber: 4
+xesam:url: https://open.spotify.com/track/3m4yVLEUMmyCm2HAHnLogU
+
+
+PlaybackStatus 
+= 
+qdbus org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get org.mpris.MediaPlayer2.Player.PlaybackStatus
+Ger tillbaka   Playing   eller     Paused
+
+
+
+PlayPause 
+=
+qdbus org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+Ger en \n och spelar/pausar låten.
+
+
+Nästa:
+=
+qdbus org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+
+
+Förra:
+qdbus org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous

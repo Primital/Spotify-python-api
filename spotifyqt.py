@@ -35,6 +35,12 @@ def spotifyPlayPause():
     if (errors):
       exit(errors)
 
+def spotifyStop():
+    cmd = Popen((qdbus,arg1,arg2, arg3+'.Stop'), stdin=PIPE, stdout=PIPE, stderr=PIPE)
+    output, errors = cmd.communicate(b"")
+    if (errors):
+      exit(errors)
+
 def spotifyMetadata():
     cmd = Popen((qdbus,arg1,arg2,'org.freedesktop.DBus.Properties.Get', arg3,'Metadata'), stdin=PIPE, stdout=PIPE, stderr=PIPE)
     output, errors = cmd.communicate(b"")
@@ -48,5 +54,6 @@ def spotifyMetadata():
 ##INTERFACE##
 #spotifyPlay('spotify:track:2QePQ29ix8gC0CbRHcGoBz') #byter till G Jones - Zig Zak
 #spotifyPlay() #Spelar oavsett om den redan spelar eller är tyst
-spotifyPlayPause() #Byter mellan paus och play
+#spotifyPlayPause() #Byter mellan paus och play
 #spotifyMetadata() #Ger tillbaka massa metadata som går att använda
+spotifyStop()

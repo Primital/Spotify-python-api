@@ -39,3 +39,8 @@ qdbus org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlay
 
 Förra:
 qdbus org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+
+
+Spela upp Uri:
+qdbus org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.OpenUri spotify:track:2QePQ29ix8gC0CbRHcGoBz 
+där spotify:track.. osv är Uri:n.
